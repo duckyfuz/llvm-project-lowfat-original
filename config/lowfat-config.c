@@ -637,7 +637,7 @@ static void compile(FILE *stream, FILE *hdr_stream, FILE *ld_stream,
     fprintf(stream, "#define LOWFAT_MAX_HEAP_ALLOC_SIZE %zu\n",
         sizes[sizes_len-1]);
     fprintf(stream, "#define LOWFAT_TID_OFFSET 0x%x\n", 0x2d0);
-    fprintf(stream, "#define LOWFAT_JOINID_OFFSET 0x%x\n", 0x628);
+    fprintf(stream, "#define LOWFAT_JOINID_OFFSET 0x%x\n", 0x620);
     if (option_no_memory_alias)
         fprintf(stream, "#define LOWFAT_NO_MEMORY_ALIAS 1\n");
     if (option_no_protect)
