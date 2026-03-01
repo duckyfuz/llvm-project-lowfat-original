@@ -225,10 +225,16 @@ namespace __sanitizer {
     unsigned long __unused1;
     unsigned long __unused2;
 #else
+#if __GLIBC_PREREQ(2, 31)
+    unsigned int mode;
+    unsigned short __seq;
+    unsigned short __pad1;
+#else
     unsigned short mode;
     unsigned short __pad1;
     unsigned short __seq;
     unsigned short __pad2;
+#endif
 #if defined(__x86_64__) && !defined(_LP64)
     u64 __unused1;
     u64 __unused2;
