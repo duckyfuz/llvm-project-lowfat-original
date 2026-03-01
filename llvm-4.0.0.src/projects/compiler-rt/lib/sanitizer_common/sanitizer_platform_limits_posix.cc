@@ -160,7 +160,12 @@ typedef struct user_fpregs elf_fpregset_t;
 # include <sys/procfs.h>
 #endif
 #include <sys/user.h>
-#include <sys/ustat.h>
+struct ustat { // <sys/ustat.h> has been removed from glibc 2.28+
+  __daddr_t f_tfree;
+  __ino_t f_tinode;
+  char f_fname[6];
+  char f_fpack[6];
+};
 #include <linux/cyclades.h>
 #include <linux/if_eql.h>
 #include <linux/if_plip.h>
