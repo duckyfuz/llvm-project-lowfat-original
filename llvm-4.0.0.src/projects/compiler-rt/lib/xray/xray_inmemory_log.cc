@@ -18,6 +18,7 @@
 #include <cassert>
 #include <cstdint>
 #include <cstdio>
+#include <iterator>
 #include <fcntl.h>
 #include <mutex>
 #include <sys/stat.h>
